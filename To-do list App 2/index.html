@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do list</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header-top">
+      <h1>Task queue</h1>
+      <div class="status-dot"></div>
+    </div>
+    <div class="subtitle" id="subtitle">// local session</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value" id="statTotal">0</div>
+      <div class="stat-label">Total</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="statActive">0</div>
+      <div class="stat-label">Active</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value" id="statDone">0</div>
+      <div class="stat-label">Done</div>
+    </div>
+  </div>
+
+  <div class="input-section">
+    <div class="input-row">
+      <input type="text" id="taskInput" placeholder="Add a task..." maxlength="200">
+      <div class="priority-select">
+        <button class="priority-btn active" data-p="low">Low</button>
+        <button class="priority-btn" data-p="med">Med</button>
+        <button class="priority-btn" data-p="high">High</button>
+      </div>
+      <button class="add-btn" id="addBtn">Add</button>
+    </div>
+    <div class="filters">
+      <button class="filter-btn active" data-f="all">All</button>
+      <button class="filter-btn" data-f="active">Active</button>
+      <button class="filter-btn" data-f="completed">Completed</button>
+    </div>
+  </div>
+
+  <ul class="task-list" id="taskList"></ul>
+  <div class="empty-state" id="emptyState" style="display:none;">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+    <p id="emptyText">// queue is empty</p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
